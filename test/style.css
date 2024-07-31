@@ -8,7 +8,7 @@
 
 
 body{
-    background-color: #ffffff;
+    background-color: #0095D9;
     font-family: Rubik;
         
 }
@@ -119,17 +119,163 @@ div button{
 
 }
     
-    div button:hover,
-    .hero .left-section .top .buttons button.doc:hover,
-    .contact .items .item button:hover{
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    }
+div button:hover{
+
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     
-    div button i{
+}
+    
+div button i{
+
     font-size: 20px;
-    }
+
+}
+
+.students {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 50px;
+    background-color: #fdfdfd;
+    border-radius: 24px 24px 0 0;
+
+}
+
+.students > h2 {
+
+    font-size: 22px;
+    text-align: center;
+    margin-bottom: 30px;
+
+}
+
+.students .cards {
+
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+    
+}
+
+.students .cards .card {
+    width: 26%;
+    padding: 0 0 30px;
+}
+
+.students .cards .card .inner {
+    padding: 24px;
+    min-height: 365px;
+}
+
+.students .cards .card .inner img {
+
+    width: 250px;
+    height: 300px;
+    border-radius: 16px;
+
+}
+
+.teachers{
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 50px;
+    background-color: #fdfdfd;
+    border-radius: 0 0 24px 24px;
+
+}
+
+.teachers > h2 {
+
+    font-size: 22px;
+    text-align: center;
+    margin-bottom: 30px;
+
+}
+
+.teachers .cards-teachers{
+
+    display: flex;
+    justify-content: center;
+    gap: 200px;
+
+}
+
+.teachers .cards-teachers .card-teacher{
+
+    width: 26%;
+    padding: 0 0 30px;
+
+}
+
+.teachers .cards-teachers .card-teacher .inner-teacher{
+
+    display: inline-block;
+    border-radius: 50%;
+    overflow: hidden;
+    width: 200px;
+    height: 200px;
+
+}
+
+.teachers .cards-teachers .card-teacher .inner-teacher img{
+
+    width:100%;
+    height:100%;
+    object-fit: cover;
+
+}
+
+.teachers .cards-teachers .card-teacher .inner-teacher .footer-teacher {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 50px;
+
+}
+
+.teachers .footer-teacher > a{
+
+    font-size: 12px;
+    text-align: center;
+    margin-bottom: 30px;
+    color: #828282;
+    text-decoration: none;
+
+}
+
+footer {
+
+    background-color: #0095D9;
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+
+}
+
+footer p{
+    font-size: 13px;
+    color: #fff;
+    transition: all 0.3s ease;
+}
+
+footer a{
+
+    color: #fff;
+    text-decoration: none;
+
+}
+
+footer a:hover{
+    color: #f5f5dc;
+}
 
 
-
-
- 
