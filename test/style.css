@@ -8,97 +8,109 @@
 
 
 body{
-    background-color: #0095D9;
+    background-color: rgb(153 200 224);
     font-family: Rubik;
         
 }
 
-.header {
+/*   Главный экран    */ 
 
-    
-    background-image: url(img/header.jpeg);
-    height: 100vh;
+header {
+
     background-size: cover;
 
 }
 
-div .header-nav {
+header img {
+
+    width: 100%;
+
+}
+
+.header-nav {
 
     padding: 0 80px;
     display: flex;
     align-items: center;
     justify-content: space-between;
     height: 80px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    transition: background-color 0.3s;
+}
+
+.active{
+
+    background-color: #ffffff;
 
 }
 
-div .nav {
 
-    text-decoration: none;
-    padding: 0 80px;
-    color: #ffffff;
+/*  Навигация по сайту  */
+
+.nav {
+
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 30px;
    
+    gap: 16px;
 
 }
 
-div .nav a{
+.nav a{
 
     text-decoration: none;
-    color: #ffffff;
-
+    color: #1E2447;
+    top: 16px;
+    padding: 12px;
+ 
 }
 
-div .header-logo a.kaf {
+.header-logo a.kaf {
 
     font-weight: 500;
     font-size: 20px;
-    
     border-right: 1px solid #ffffff;
+    border-color: #1E2447;
     padding-right: 20px;
     height: 25px;
-    
-    
+      
 }
     
-div .header-logo a.mat {
+.header-logo a.mat {
     
     width: 250px;
     font-size: 12px;
+
     
 }
 
-
-
-div .nav a:hover{
+.nav a:hover{
     
     color: #f5f5dc;
 
 }
 
-div .header-logo{
+.header-logo{
 
     display: flex;
     align-items: center;
     gap: 20px;
    
-
 }
 
-div .header-logo img {
+.header-logo img {
 
     width: 55px;
     height: 50px;
 
 }
 
-div .header-logo a  {
+.header-logo a  {
 
     text-decoration: none;
-    color: #ffffff;
+    color: #1E2447;
 
 }
 
@@ -109,27 +121,37 @@ div button{
     justify-content: center;
     gap: 3px;
     font-size: 14px;
-    height: 32px;
-    width: 122px;
-    background-color: #387dff;
-    color: #ffff;
-    border-radius: 8px;
+    background-color: #f5f5dc;
+    color: #1E2447;
+    border-radius: 16px;
+    top: 16px;
+    padding: 12px;
     border: 1px solid transparent;
     transition: all 0.3s ease;
+    cursor: pointer;
+ 
 
 }
-    
-div button:hover{
 
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    
-}
-    
 div button i{
 
     font-size: 20px;
 
 }
+
+/*   Навигация для остальных страниц  */
+
+header .pages {
+
+    background-size: cover;
+
+
+
+}
+
+
+/*   Студенту   */
+
 
 .students {
 
@@ -151,31 +173,74 @@ div button i{
 
 }
 
+/*  Карточки для перехода */
+
 .students .cards {
 
     display: flex;
-    justify-content: center;
-    gap: 100px;
+    flex: 1;
+    gap: 193px;
     
 }
 
 .students .cards .card {
     width: 26%;
     padding: 0 0 30px;
+    width: 250px;
+    height: 300px;
 }
 
-.students .cards .card .inner {
-    padding: 24px;
-    min-height: 365px;
+
+.students .cards .card .inner{
+
+    background-color: #EBF0FF;
+    border-radius: 16px;
+    cursor: pointer;
+    width: 260px;
+    height: 300px;
+    box-shadow: 0 5px 32px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease;
+    border-bottom: 4px solid transparent;
+    z-index: 0;
+
+}
+
+.students .cards .card .inner:hover{
+
+    border-color: #5e3bee;
+
+}
+
+.students .cards .card .inner h4{
+
+    text-align: center;
+    padding-top: 30px;
+    font-size: 24px;
+    z-index: 2;
+   
+
+
+}
+
+.students .cards .card .inner h4:hover{
+    color: aquamarine;
+
+
 }
 
 .students .cards .card .inner img {
 
-    width: 250px;
+    width: 260px;
     height: 300px;
-    border-radius: 16px;
+    object-fit: contain;
+    z-index: 1;
+
 
 }
+
+
+/*  Преподаватели  */
+
 
 .teachers{
 
@@ -185,7 +250,6 @@ div button i{
     flex-direction: column;
     padding: 50px;
     background-color: #fdfdfd;
-    border-radius: 0 0 24px 24px;
 
 }
 
@@ -250,9 +314,27 @@ div button i{
 
 }
 
+/*  Научные исследования  */
+
+.Scientific_research{
+    background-color: #fdfdfd;
+}
+
+
+
+.Scientific_research > h2{
+
+    font-size: 22px;
+    text-align: center;
+    margin-bottom: 30px;
+
+}
+
+/*  Футер  */
+
 footer {
 
-    background-color: #0095D9;
+    background-color: rgb(153 200 224);
     padding: 30px;
     display: flex;
     align-items: center;

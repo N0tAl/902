@@ -11,68 +11,76 @@
 </head>
 <body>
 
-    <div class="header">
+ <!-- Главный экран --> 
+
+    <header>
+        <img src="img/пример.png">
         <div class="container">
             <div class="header-nav">
                 <div class="header-logo">
                     <a href="#"><img src="img/logo.png"></a>
-                    <a href="#" class="kaf">КАФЕДРА 902 </a>
-                    <a href="#" class="mat">СОПРОТИВЛЕНИЕ МАТЕРИАЛОВ, ДИНАМИКА И ПРОЧНОСТЬ МАШИН</a>
+                    <a href="index.html" class="kaf">КАФЕДРА 902 </a>
+                    <a href="index.html" class="mat">СОПРОТИВЛЕНИЕ МАТЕРИАЛОВ, ДИНАМИКА И ПРОЧНОСТЬ МАШИН</a>
                 </div>
     
                 <div class="nav">
-                    <a href="#">О кафедре</a>
-                    <a href="#">Преподаватели</a>
-                    <a href="#">Расписание</a>
+                    <a href="o_kafedre.html">О кафедре</a>
+                    <a href="prepodavatelu.html">Преподаватели</a>
+                    <a href="raspisanie.html">Расписание</a>
+                    <button><i class="Studentu"></i> Студенту</button>
                 </div>
-                <button><i class="Studentu"></i> Студенту</button>
             </div>
         </div>
-    </div>
+    </header>
 
-
+ <!-- Студенту -->
 
     <div class="students">
-        <h2>Студенту</h2>
+        <h2>СТУДЕНТУ</h2>
         <div class="cards">
             <div class="card">
                 <div class="inner">
-                    <a href="#"><img class="lit_img" src="img/lit.jpg"></a>
+                    <h4>Задания</h4>
+                    <a href="#"><img class="lit_img" src="img/задания.png"></a>
                 </div>
             </div>
             
             <div class="card">
                 <div class="inner">
-                    <a href="#"><img class="lit_img" src="img/zadania.jpg"></a>
+                    <h4>Литература</h4>
+                    <a href="zadania.html"><img class="lit_img" src="img/литература.png"></a>
                 </div>
             </div>
             
             <div class="card">
                 <div class="inner">
-                    <a href="#"><img class="lit_img" src="img/video.jpg"></a>
+                    <h4>Видео-лекции</h4>
+                    <a href="#"><img class="lit_img" src="img/видео-лекции.png"></a>
                 </div>
             </div>
         </div>
     </div>
-        
+   
+ <!-- Преподаватели -->
+
     <div class="teachers">
-        <h2>Преподаватели</h2>
+        <h2>ПРЕПОДАВАТЕЛИ</h2>
         <div class="cards-teachers">
             <div class="card-teacher">
                 <div class="inner-teacher">
-                    <img class="lit_img" src="img/Мяу.jpg">
+                    <img class="lit_img" src="img/Мяу.png">
                 </div>
             </div>
 
             <div class="card-teacher">
                 <div class="inner-teacher">
-                    <img class="lit_img" src="img/Мяу.jpg">
+                    <img class="lit_img" src="img/Мяу.png">
                 </div>
             </div>
 
             <div class="card-teacher">
                 <div class="inner-teacher">
-                    <img class="lit_img" src="img/Мяу.jpg">
+                    <img class="lit_img" src="img/Мяу.png">
                 </div>
             </div>
 
@@ -83,6 +91,12 @@
         </div>
     </div>
 
+ <!-- Научные исследования -->
+
+    <div class="Scientific_research">
+        <h2>НАУЧНЫЕ ИССЛЕДОВАНИЯ</h2>
+    </div>
+
 
     <footer>
         <p>© 2024 <a href="#">Leonteva</a></p>
@@ -91,7 +105,6 @@
  
 
 <div class="content"></div>
-<script src.="scroll.js"></script>
 </body>
-
+<script defer src="scroll.js"></script>
 </html>
