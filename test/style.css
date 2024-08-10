@@ -24,6 +24,7 @@ header {
 header img {
 
     width: 100%;
+    z-index: -99;
 
 }
 
@@ -34,17 +35,11 @@ header img {
     align-items: center;
     justify-content: space-between;
     height: 80px;
-    position: fixed;
     width: 100%;
+    position: fixed;
     top: 0;
-    left: 0;
+    z-index: 999999999;
     transition: background-color 0.3s;
-}
-
-.active{
-
-    background-color: #ffffff;
-
 }
 
 
@@ -64,6 +59,7 @@ header img {
     color: #1E2447;
     top: 16px;
     padding: 12px;
+    transition: all 0.3s ease;
  
 }
 
@@ -72,6 +68,7 @@ header img {
     font-weight: 500;
     font-size: 20px;
     border-right: 1px solid #ffffff;
+    border-width: medium;
     border-color: #1E2447;
     padding-right: 20px;
     height: 25px;
@@ -82,13 +79,12 @@ header img {
     
     width: 250px;
     font-size: 12px;
-
-    
+  
 }
 
 .nav a:hover{
     
-    color: #f5f5dc;
+    color: #4a7bf7;
 
 }
 
@@ -114,29 +110,33 @@ header img {
 
 }
 
-div button{
+/*   Шапка при скролле  */
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 3px;
-    font-size: 14px;
-    background-color: #f5f5dc;
-    color: #1E2447;
-    border-radius: 16px;
-    top: 16px;
-    padding: 12px;
-    border: 1px solid transparent;
-    transition: all 0.3s ease;
-    cursor: pointer;
- 
+.active{
+
+    background-color: #ffffff;
+    -webkit-box-shadow: 0px 5px 40px 5px rgba(34, 60, 80, 0.2);
+    -moz-box-shadow: 0px 5px 40px 5px rgba(34, 60, 80, 0.2);
+    box-shadow: 0px 5px 40px 5px rgba(34, 60, 80, 0.2);
 
 }
 
-div button i{
+.active a{
 
-    font-size: 20px;
+    color: #4a7bf7;
 
+}
+
+.active a:hover{
+
+    color: #1E2447;
+
+}
+
+.active a.kaf{
+
+    border-color: #4a7bf7;
+    
 }
 
 /*   Навигация для остальных страниц  */
@@ -144,8 +144,6 @@ div button i{
 header .pages {
 
     background-size: cover;
-
-
 
 }
 
@@ -161,7 +159,7 @@ header .pages {
     flex-direction: column;
     padding: 50px;
     background-color: #fdfdfd;
-    border-radius: 24px 24px 0 0;
+    border-radius: 34px 34px 0 0;
 
 }
 
@@ -178,32 +176,38 @@ header .pages {
 .students .cards {
 
     display: flex;
-    flex: 1;
-    gap: 193px;
+   
+    gap: 60px;
+    justify-content: center;
     
 }
 
 .students .cards .card {
-    width: 26%;
-    padding: 0 0 30px;
+
     width: 250px;
     height: 300px;
+    position: relative;
 }
 
 
 .students .cards .card .inner{
 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
     background-color: #EBF0FF;
     border-radius: 16px;
     cursor: pointer;
-    width: 260px;
-    height: 300px;
     box-shadow: 0 5px 32px rgba(0, 0, 0, 0.15);
     transition: all 0.3s ease;
     border-bottom: 4px solid transparent;
-    z-index: 0;
-
+    
 }
+
+
 
 .students .cards .card .inner:hover{
 
@@ -211,20 +215,40 @@ header .pages {
 
 }
 
-.students .cards .card .inner h4{
+.students .cards .card .inner .content{
 
+    position: absolute; 
+    top: 0; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
     text-align: center;
-    padding-top: 30px;
-    font-size: 24px;
-    z-index: 2;
-   
-
+    z-index: 1
 
 }
 
-.students .cards .card .inner h4:hover{
-    color: aquamarine;
 
+
+.students .cards .card .inner a{
+
+    text-decoration: none;
+    color: black;
+    text-align: center;
+
+}
+
+.students .cards .card .inner h4{
+
+    display: flex;
+    white-space: nowrap;
+    padding-top: 100px;
+    font-size: 24px;
+    margin: 0;
+    
+}
+
+.students .cards .card .inner a:hover h4{
+
+    color:  #4a7bf7;
 
 }
 
@@ -232,9 +256,9 @@ header .pages {
 
     width: 260px;
     height: 300px;
+    position: relative;
     object-fit: contain;
-    z-index: 1;
-
+    margin-top: 20px;
 
 }
 
