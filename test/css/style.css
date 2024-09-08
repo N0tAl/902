@@ -24,6 +24,7 @@ header img {
 
     width: 100%;
     z-index: -99;
+    border-radius: 0 0 24px 24px;
 
 }
 
@@ -137,6 +138,78 @@ header img {
     
 }
 
+
+
+
+
+
+
+
+
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 30px;
+    height: 30px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.menu-toggle span {
+    width: 100%;
+    height: 3px;
+    background-color: #1E2447;
+    border-radius: 2px;
+}
+
+/* Мобильное меню */
+.mobile-menu {
+    display: none;
+    flex-direction: column;
+    background-color: #ffffff;
+    position: absolute;
+    top: 80px; /* Высота вашего header */
+    left: 0;
+    right: 0;
+    padding: 20px;
+    z-index: 1000;
+}
+
+.mobile-menu a {
+    text-decoration: none;
+    color: #1E2447;
+    padding: 10px 0;
+    text-align: center;
+}
+
+
+
+
+/* Стиль для фиксированного header-nav */
+.header-nav.sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000; /* Меню будет выше остальных элементов */
+    background-color: #fff; /* Цвет фона */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Тень для отделения */
+}
+
+/* Убедитесь, что мобильное меню тоже фиксируется при скролле */
+.header-nav.sticky .mobile-menu {
+    position: fixed;
+    top: 80px; /* Скорректируйте в зависимости от высоты header-nav */
+    left: 0;
+    right: 0;
+}
+
+
+
+
+
 /*   Студенту   */
 
 
@@ -160,6 +233,11 @@ header img {
     margin-bottom: 30px;
 
 }
+
+
+
+
+
 
 /*  Карточки для перехода */
 
@@ -290,6 +368,8 @@ main .header p {
   line-height: 1.6;
   color: #565656;
 }
+
+
 main .item {
   width: 100%;
   height: 400px;
@@ -343,12 +423,12 @@ main .item .overlay > div h2 {
   }
 }
 .owl-nav button {
-  background: #fff !important;
+  background: #EBF0FF !important;
   width: 45px;
   height: 45px;
   font-size: 25px !important;
   box-shadow: 0px 0px 17px #00000005;
-  border-radius: 50%;
+  border-radius: 100% !important;
 }
 .owl-nav button:nth-of-type(1) {
   margin-right: 24px;
@@ -452,9 +532,10 @@ footer a:hover{
 
 }
 
-.breadcrumb-item .active{
+.breadcrumb-item-active{
 
-    color: black;
+
+    background-color: #fdfdfd;
 
 }
 
@@ -471,12 +552,13 @@ footer a:hover{
     background-color: #fdfdfd;
     border-radius: 34px 34px 0 0;
     
-
 }
 
 
 .predmets-contanier .predmets {
-
+    
+    width: 1280px; 
+    margin: 0 auto; 
     display: flex;
     gap: 60px;
     
@@ -499,7 +581,7 @@ footer a:hover{
     justify-content: center;
     width: 100%;
     height: 100%;
-    background-color: #EBF0FF;
+    background-color: #FFF;
     border-radius: 16px;
     cursor: pointer;
     box-shadow: 0 5px 32px rgba(0, 0, 0, 0.15);
@@ -543,13 +625,10 @@ footer a:hover{
 /*  Переход по предметам (активный предмет)  */
 
 
-
-
 .predmets-contanier .predmets .predmet-active {
 
     width: 200px;
     height: 70px;
-    border: 1px solid #1c1e53;
     border-radius: 16px;
     position: relative;
 
@@ -602,4 +681,230 @@ footer a:hover{
     font-size: 18px;
     margin: 0;
   
+}
+
+
+
+
+
+
+
+
+
+/* В РАЗРАБОТКЕ*/
+
+.container_Dev {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.container_Dev img {
+    width: 300px;
+    height: auto;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.container_Dev h1 {
+    margin-top: 20px;
+    font-size: 32px;
+    color: #333;
+}
+
+.container_Dev a {
+    display: block;
+    margin-top: 10px;
+    font-size: 18px;
+    color: #007bff;
+    text-decoration: none;
+}
+
+.container_Dev a:hover {
+    color: #f34892;
+}
+
+
+
+
+
+
+/* ================================= */
+/* Адаптивные стили для планшетов и мобильных */
+/* ================================= */
+
+
+/* Медиазапрос для экранов от 1200px до 992px */
+@media (max-width: 1200px) {
+    .header-nav {
+        padding: 0 20px;
+    }
+
+
+    .header-logo a.kaf {
+        font-size: 18px;
+    }
+
+    .header-logo a.mat {
+
+        font-size: 14px; 
+    }
+
+    .nav a{
+
+        font-size: 14px;
+    }
+
+
+    .students .cards {
+        gap: 40px;
+    }
+
+    .students .cards .card {
+        width: 220px;
+        height: 260px;
+    }
+
+    main {
+        width: 90%;
+    }
+}
+
+
+
+
+
+
+/* Медиазапрос для экранов от 992px до 768px */
+@media (max-width: 992px) {
+   
+    .header-logo img {
+        width: 45px;
+        height: 40px;
+    }
+   
+    .header-nav {
+        padding: 0 20px;
+    }
+
+    .header-logo a.kaf {
+        font-size: 16px;
+    }
+
+    .header-logo a.mat {
+
+        font-size: 12px; 
+    }
+
+    .nav a{
+
+        font-size: 12px;
+    }
+
+    .students {
+        padding: 40px;
+    }
+
+    .students .cards {
+        gap: 30px;
+        flex-wrap: wrap;
+    }
+
+    .students .cards .card {
+        width: 200px;
+        height: 250px;
+    }
+
+    main .header h2 {
+        font-size: 2.5rem;
+    }
+
+    main .header p {
+        font-size: 1rem;
+    }
+}
+
+
+
+
+
+
+
+
+
+/* Медиазапрос для экранов от 768px до 576px */
+@media (max-width: 768px) {
+
+    .nav {
+        display: none;
+    }
+
+    nav.open .header-logo img {
+        display: none;
+    }
+
+    nav.open a{
+        display: flex;
+    }
+
+    nav button#menuButton{
+        display: flex;
+    }
+
+    .students {
+        padding: 30px;
+    }
+
+    .students .cards {
+        gap: 40px;
+        flex-wrap: wrap;
+    }
+
+    .students .cards .card {
+        flex-basis: calc(50% - 40px); /* Делаем 2 карточки в ряду с учетом gap */
+    }
+
+    main .header h2 {
+        font-size: 2rem;
+    }
+
+    main .header p {
+        font-size: 0.9rem;
+    }
+}
+
+/* Медиазапрос для экранов менее 576px */
+@media (max-width: 576px) {
+    .header-nav {
+        padding: 0 5px;
+    }
+
+    .students {
+        padding: 20px;
+    }
+
+    .students .cards {
+        gap: 10px;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    .students .cards .card {
+        width: 150px;
+        height: 200px;
+    }
+
+    main .header h2 {
+        font-size: 1.8rem;
+    }
+
+    main .header p {
+        font-size: 0.8rem;
+    }
+
+    .owl-nav {
+        display: none; /* можно скрыть навигацию в карусели на малых экранах */
+    }
 }
