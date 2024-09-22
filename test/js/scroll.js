@@ -52,6 +52,6 @@ $(".owl-carousel").owlCarousel({
 
 
 function openMenu() {
-  const nav = document.querySelector('nav');
+  const nav = document.querySelector('header');
   nav.classList.toggle('open');
 }
