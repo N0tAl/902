@@ -10,32 +10,71 @@
     <title>О кафедре</title>
     <script defer src="scroll.js"></script>
 </head>
-<body>
+<body style="background-color: #fdfdfd;">
+
+    <div class="wrapper">
+        <div class="contentz">
     
-    <header class="pages">
-        <div class="container">
-            <div class="header-nav">
-                <div class="header-logo">
-                    <a href="#"><img src="img/logo.png"></a>
-                    <a href="index.html" class="kaf">КАФЕДРА 902 </a>
-                    <a href="index.html" class="mat">СОПРОТИВЛЕНИЕ МАТЕРИАЛОВ, ДИНАМИКА И ПРОЧНОСТЬ МАШИН</a>
+            <header class="pages" style="background-color: white;">
+                <div class="container">
+                    <div class="header-nav" style="background-color: white;">
+                        <div class="header-logo">
+                            <a href="#"><img src="img/logo1.png"></a>
+                            <a href="index.html" class="kaf" style="color: #4a7bf7;  border-color: #4a7bf7">КАФЕДРА 902 </a>
+                            <a href="index.html" class="mat"  style="color: #4a7bf7;">СОПРОТИВЛЕНИЕ МАТЕРИАЛОВ, ДИНАМИКА И ПРОЧНОСТЬ МАШИН</a>
+                        </div>
+            
+                        <div class="nav">
+                            <a href="index.html"  style="color: #4a7bf7;">Студенту</a>
+                            <a class="selected" href="o_kafedre.html"  style="color: #4a7bf7;">О кафедре</a>
+                            <a href="In_development.html"  style="color: #4a7bf7;">Преподаватели</a>
+                            <a href="In_development.html"  style="color: #4a7bf7;">Расписание</a>
+                        </div>
+                        <button id="menuButton" onclick="openMenu()"></button>
+                        <i class='bx bx-menu'></i>
+                    </button>
+                    </div>
                 </div>
-    
-                <div class="nav">
-                    <a href="#">Студенту</a>
-                    <a class="selected" href="o_kafedre.html">О кафедре</a>
-                    <a href="prepodavatelu.html">Преподаватели</a>
-                    <a href="raspisanie.html">Расписание</a>
-                </div>
-            </div>
+            </header>
+
+            <div class="nav-container">
+                <nav aria-label="breadcrumb" style="margin-top: 100px;">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="index.html">Главная</a></li>
+                        <li class="breadcrumb-item-active" aria-current="page">О кафедре</li>
+                    </ol>
+                </nav>
+            </div> 
+
+
+            <div class="site-aligner">
+                <section class="site-main content-left" id="sitemain">
+                    <div class="entry-content">
+                        
+                        <p>Кафедра 902 «Сопротивление материалов, динамика и прочность машин» — одна из старейших кафедр университета, основана в 1930 году. В настоящее время кафедрой руководит доктор физико-математических наук, доцент Григорий Валерьевич Федотенков.</p>
+                        <p>Кафедра готовит бакалавров по направлению подготовки «Прикладная механика». В процессе обучения реализуется принцип гармоничного объединения фундаментального и инженерного образования, который позволяет выпускнику получить усиленную математическую подготовку в сочетании с общеинженерными знаниями, расширить знания сверх обязательной программы за счёт включённой в учебные планы научно-исследовательской работы студентов под руководством высококвалифицированных преподавателей, а также закрепить знания в процессе прохождения учебных практик на передовых предприятиях промышленности, в научно-исследовательских учреждениях и других организациях.</p>
+                        <p>На кафедре 311 существует бюджетная и платная форма обучения. Но если учащийся на договорной основе закрывает сессию на «хорошо» и «отлично», есть возможность перевестись на бесплатную. Имеется очное и заочное отделение. И даже в этом кафедра гибка: если у студента возникает необходимость перевестись с очного отделения на заочное или наоборот, это можно сделать достаточно просто.</p>
+                        <p>Приобретённые в процессе обучения знания позволяют выпускнику занимать соответствующие его квалификации должности не только в различных областях аэрокосмической промышленности, но и во многих других отраслях экономики.</p>
+                    
+                    </div>
+                </section>    
+            </div> 
+
+
         </div>
-    </header>
+        <footer>
+            <p>© 2024 <a href="#">Leonteva</a></p>
+        </footer>
+    </div>    
+         
+   
+    
 
 
 
-
-
-
+    <script defer src="js/jquery-3.7.1.min.js"></script>
+    <script defer src="js/owl.carousel.min.js"></script>
+    <script defer src="js/scroll.js"></script>  
 
 </body>
 </html>

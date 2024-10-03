@@ -10,9 +10,10 @@
 body{
 
     font-family: Rubik;    
+    background-color: #8ccae3;
 }
 
-/*   Главный экран    */ 
+/*   ГЛАВНАЯ    */ 
 
 header {
 
@@ -24,13 +25,12 @@ header img {
 
     width: 100%;
     z-index: -99;
-    border-radius: 0 0 24px 24px;
 
 }
 
 .header-nav {
 
-    padding: 0 80px;
+        
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -40,6 +40,7 @@ header img {
     top: 0;
     z-index: 999999999;
     transition: background-color 0.3s;
+    padding: 0 60px;
 }
 
 
@@ -73,6 +74,8 @@ header img {
     height: 25px;
       
 }
+
+
     
 .header-logo a.mat {
     
@@ -139,30 +142,43 @@ header img {
 }
 
 
-header button{
-    color: #1c1e53;
-    background-color: transparent;
-    padding: 12px 16px;
-    border-radius: 5px;
-    border: 1px solid #1c1e53;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
 
-header button:hover{
-    background-color: #5e3bee;
-    border-color: #5e3bee;
-    color: #fff;
-}
+
 
 
 header button#menuButton{
+    background-color: transparent;
     display: none;
     align-items: center;
     justify-content: center;
     font-size: 24px;
     padding: 7px;
+    justify-content: space-between; 
+    flex-direction: column;
+    margin-right: 10px;
+    border: none;
 }
+
+
+#menuButton i {
+    display: block;
+    width: 15px; 
+    height: 1.5px; 
+    background-color: #1c1e53; 
+    margin: 2.5px 0; 
+    transition: 0.3s; 
+    border-radius: 2px; 
+}
+
+
+
+
+
+
+
+
+
+
 
 
 /*   Студенту   */
@@ -176,7 +192,7 @@ header button#menuButton{
     flex-direction: column;
     padding: 50px;
     background-color: #fdfdfd;
-    border-radius: 34px 34px 0 0;
+    border-radius: 24px 24px 24px 24px;
     
 
 }
@@ -419,7 +435,9 @@ footer {
     justify-content: center;
     gap: 20px;
 
+    z-index: -1;
 }
+
 
 footer p{
     font-size: 13px;
@@ -686,6 +704,158 @@ footer a:hover{
 
 
 
+
+
+/*  О КАФЕДРЕ  */
+
+
+
+.site-aligner {
+
+    width: 1280px; 
+    margin: 20px auto; 
+    background-color: #fdfdfd;
+    
+
+}
+
+
+.entry-content {
+    max-width: 800px; 
+    margin: 0; 
+}
+
+
+.entry-content p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin: 15px 0;
+}
+
+
+
+
+
+/*  ЗАДАНИЯ  */
+
+
+
+.semester {
+
+    width: 1280px; 
+    margin: 20px auto; 
+    background-color: #fdfdfd;
+}
+
+.file-list {
+    list-style-type: disc; 
+    padding-left: 20px; 
+    padding-top: 10px; 
+    border-radius: 24px 24px 0 0;
+    z-index: 1;
+}
+.file-list li {
+    margin-bottom: 10px; 
+}
+.file-list a {
+    text-decoration: none; 
+    color: #007BFF; 
+    font-size: 16px; 
+}
+.file-list a:hover {
+    text-decoration: underline; 
+}
+
+.contentz {
+    min-height: calc(100vh - 175px);
+}
+
+
+
+
+
+
+/*  ЛИТЕРАТУРА  */
+
+
+.literatura{
+
+    width: 1280px; 
+    margin: 20px auto; 
+    background-color: #fdfdfd;
+
+}
+
+.file-lit {
+
+    padding-left: 20px; 
+    padding-top: 10px; 
+}
+.file-lit li {
+    margin-bottom: 10px; 
+}
+.file-lit a {
+    text-decoration: none; 
+    color: #007BFF; 
+    font-size: 16px; 
+}
+.file-lit a:hover {
+    text-decoration: underline; 
+}
+
+
+
+/*  ЛAБ РАБ  */
+
+.lab{
+
+    width: 1280px; 
+    margin: 20px auto; 
+    background-color: #fdfdfd;
+
+}
+
+.file-lab {
+
+    padding-left: 20px; 
+    padding-top: 10px; 
+}
+.file-lab li {
+    margin-bottom: 10px; 
+}
+.file-lab a {
+    text-decoration: none; 
+    color: #007BFF; 
+    font-size: 16px; 
+}
+.file-lab a:hover {
+    text-decoration: underline; 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* ================================= */
 /* Адаптивные стили для планшетов и мобильных */
 /* ================================= */
@@ -808,33 +978,93 @@ footer a:hover{
         display: flex;
     }
 
-
-
-
     .students {
         padding: 30px;
     }
 
     .students .cards {
-        gap: 40px;
-        flex-wrap: wrap;
+        flex-direction: column; /* Размещаем карточки в столбик */
+        gap: 20px; /* Уменьшаем расстояние между карточками */
+        align-items: center; /* Выравнивание по центру */
     }
-
+    
     .students .cards .card {
-        flex-basis: calc(50% - 40px); /* Делаем 2 карточки в ряду с учетом gap */
+        width: 90%; /* Ширина карточки почти на всю ширину экрана */
+        max-width: 400px; /* Максимальная ширина для больших экранов */
+    }
+    
+    .students .cards .card .inner img {
+        width: 100%; /* Картинка занимает всю ширину карточки */
+        height: auto; /* Высота определяется автоматически */
+        margin-top: 10px; /* Уменьшаем верхний отступ */
+    }
+    
+    .students .cards .card .inner h4 {
+        padding-top: 20px; /* Уменьшаем верхний отступ */
+        font-size: 18px; /* Уменьшаем размер шрифта */
     }
 
-    main .header h2 {
-        font-size: 2rem;
-    }
-
-    main .header p {
-        font-size: 0.9rem;
+    .students .cards .card .inner .content {
+        top: 10%; /* Позиционирование текста относительно картинки */
     }
 }
 
+
+
+
+
+
 /* Медиазапрос для экранов менее 576px */
 @media (max-width: 576px) {
+   
+    .nav {
+        display: none;
+    }
+
+    .header-logo img {
+        display: none;
+    }
+
+    .header-nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px;
+    }
+
+    .header-logo a.kaf {
+        top: 1px;
+        font-size: 10px;
+        border-right: 0.5px solid ;
+        border-width: 1.5px;
+        border-color: #1E2447;
+    }
+
+    .header-logo a.mat{
+
+        font-size: 6px;
+        width: 130px;
+
+    }
+
+    header.open .header-logo {
+        display: none;
+    }
+
+    header.open .nav{
+        display: flex;
+        gap: 5px;
+    }
+
+    header.open .nav a{
+        display: flex;
+        font-size: 9px;
+    }
+
+    header button#menuButton{
+        display: flex;
+    }
+ 
     .header-nav {
         padding: 0 5px;
     }
@@ -844,20 +1074,33 @@ footer a:hover{
     }
 
     .students .cards {
+        flex-direction: row;
         gap: 10px;
         flex-wrap: wrap;
-        justify-content: space-around;
+        justify-content: center;
     }
 
     .students .cards .card {
-        width: 150px;
+        width: calc(50% - 10px);
         height: 200px;
     }
+
+
+    .students .cards .card .inner {
+        height: 100%;
+    }
+
+
+    .students .cards .card .inner h4 {
+        font-size: 16px;
+        padding-top: 10px;
+    }
+
 
     main .header h2 {
         font-size: 1.8rem;
     }
-
+ 
     main .header p {
         font-size: 0.8rem;
     }
@@ -865,4 +1108,89 @@ footer a:hover{
     .owl-nav {
         display: none; /* можно скрыть навигацию в карусели на малых экранах */
     }
+
+    .nav-container {
+        width: 100%;
+        padding: 0 20px; /* Добавляем отступы по бокам */
+        box-sizing: border-box; /* Убедимся, что padding не влияет на общую ширину */
+    }
+
+/* ЗАДАНИЯ  ГЛАВНАЯ*/
+
+    .predmets-contanier, .predmets {
+        display: flex;
+        flex-direction: column; /* Список предметов также в столбик */
+    
+    }
+
+
+    h3 {
+        font-size: 18px; /* Уменьшаем размер заголовков */
+        padding: 0 20px;
+    }
+
+ 
+    ul.file-list li {
+        margin-bottom: 10px; /* Отступы между элементами списка */
+        padding: 0 20px;
+    }
+
+    ul.file-list li a {
+        font-size: 14px; /* Уменьшаем размер шрифта */
+        color: #4a7bf7;
+    }
+
+    footer p {
+        font-size: 14px; /* Уменьшаем шрифт в футере */
+    }
+
+/* ЗАДАНИЯ  СТРАНИЦА*/
+
+
+    .semester {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    .predmets-contanier .predmets{
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    .file-list {
+        padding-left: 20px;
+
+    }
+
+    .file-list a {
+        font-size: 14px;
+    }
+
+
+/* ЛАБ РАБОТЫ */
+
+
+    .lab {
+        width: 100%;
+        margin: 10px 0;
+        padding-left: 20px;
+    }
+
+/* ЛИТЕРАТУРА */
+
+    .literatura{
+
+        width: 100%;
+        margin: 10px 0;
+        padding-left: 20px;
+        
+    }
+
+
+    .site-aligner{
+        width: 100%;
+        margin: 10px auto;
+        padding-left: 20px;
+    }
+
 }
